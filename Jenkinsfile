@@ -31,11 +31,11 @@ pipeline {
                }
           }
 
-          // stage("Docker build") {
-          //      steps {
-          //           sh "docker build -t leszko/calculator:${BUILD_TIMESTAMP} ."
-          //      }
-          // }
+          stage("Docker build") {
+               steps {
+                    sh "docker build -t leszko/calculator:${BUILD_TIMESTAMP} ."
+               }
+          }
 
           // stage("Docker login") {
           //      steps {
@@ -52,11 +52,11 @@ pipeline {
           //      }
           // }
 
-          stage("Update version") {
-               steps {
-                    sh "sed  -i 's/{{VERSION}}/${BUILD_TIMESTAMP}/g' calculator.yaml"
-               }
-          }
+          // stage("Update version") {
+          //      steps {
+          //           sh "sed  -i 's/{{VERSION}}/${BUILD_TIMESTAMP}/g' calculator.yaml"
+          //      }
+          // }
           
           // stage("Deploy to staging") {
           //      steps {
