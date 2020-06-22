@@ -31,11 +31,11 @@ pipeline {
                }
           }
 
-          stage("Docker build") {
-               steps {
-                    sh "docker build -t leszko/calculator:${BUILD_TIMESTAMP} ."
-               }
-          }
+          // stage("Docker build") {
+          //      steps {
+          //           sh "docker build -t leszko/calculator:${BUILD_TIMESTAMP} ."
+          //      }
+          // }
 
           // stage("Docker login") {
           //      steps {
